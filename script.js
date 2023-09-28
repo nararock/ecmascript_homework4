@@ -16,7 +16,7 @@ async function getUserData(ID) {
         const response = await fetch(`https://reqres.in/api/users?page=2&id=${ID}`);
         if (response.ok) {
             const user = await response.json();
-            console.log(user);
+            console.log(user.data);
         }
         else {
             console.log(await response.text());
